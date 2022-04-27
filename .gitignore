@@ -1,0 +1,9 @@
+.idea
+*.iml
+*.ipr
+*.iws
+*.log
+out
+gen
+build
+lib

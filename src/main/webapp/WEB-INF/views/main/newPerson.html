@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>My app</title>
+</head>
+
+<body>
+
+    <form th:method="POST" th:action="@{/home/create}" th:object="${person}">
+        <label for="name">Enter name: </label>
+        <input type="text" th:field="*{name}" id="name"/></br>
+        <label for="name">Enter mail: </label>
+        <input type="text" th:field="*{mail}" id="mail"/></br>
+        <div style="color: red" th:if="${#fields.hasErrors('mail')}" th:errors="*{mail}"></div>
+        <label for="name">Enter password: </label>
+        <input type="text" th:field="*{password}" id="password"/></br>
+        <div style="color: red" th:if="${#fields.hasErrors('password')}" th:errors="*{password}"></div>
+        <input type="submit" value="Create"/>
+    </form>
+
+</body>
+
+</html>

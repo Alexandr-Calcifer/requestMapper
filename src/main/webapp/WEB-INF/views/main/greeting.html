@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th="http://thymeleaf.org">
+
+<head>
+    <meta charset="ISO-8859-1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My app</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+          crossorigin="anonymous">
+    <script type="text/javascript" src="/resources/js/Counter.js"></script>
+</head>
+
+<body>
+
+    <div class="container text-center my-5">
+        <div class="row">
+            <div class="col-lg-6 col-md-8 col-sm-12  mx-auto" >
+                <p>Greeting, my friends!</p>
+                <button class="btn btn-primary" id="likeCounter" onclick="upCounter()">
+                    Likes: 0
+                </button>
+                <a th:href="@{/home/greeting/getUsers}" target="_blank">users</a>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
